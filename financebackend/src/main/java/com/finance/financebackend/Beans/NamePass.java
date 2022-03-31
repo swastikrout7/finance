@@ -28,4 +28,11 @@ public class NamePass {
 		this.password = password;
 	}
 
+	@Override
+	public String toString() {
+		return "NamePass [name=" + name + ", password=" + password + "]";
+	}
+	
+	
+
 }

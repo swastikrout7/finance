@@ -19,13 +19,13 @@ public class ProductHistoryController {
 	@Autowired
 	ProductHistoryService prodhistService;
 
-	//http://localhost:8282/producthistory/addProduct
+	//http://localhost:8585/producthistory/addProduct
 	@PostMapping("/addProduct")
 	public boolean addProduct(@RequestBody ProductHistory prodhist) {
 		return prodhistService.addProduct(prodhist);
 	}
 	
-	//http://localhost:8282/producthistory/viewProduct
+	//http://localhost:8585/producthistory/viewProduct
 	@GetMapping("/viewProduct")
 	public List<ProductHistory> getAll() {
 		return prodhistService.viewProduct();

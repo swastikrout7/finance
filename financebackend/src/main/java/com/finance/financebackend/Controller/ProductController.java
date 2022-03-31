@@ -19,7 +19,7 @@ public class ProductController {
 	@Autowired
 	ProductService prodService;
 
-	//http://localhost:8282/order/getAll
+	//http://localhost:8585/order/getAll
 	@GetMapping("/getAll")
 	public List<Product> getAll() {
 		return prodService.viewProduct();

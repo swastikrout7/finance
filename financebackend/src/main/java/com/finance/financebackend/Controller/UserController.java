@@ -23,25 +23,25 @@ public class UserController {
 	@Autowired
 	UserService userService;
 	
-	//http://localhost:8282/user/findUserByUname
+	//http://localhost:8585/user/findUserByUname
 	@GetMapping("/findUserByUname/{uname}")
 	public User finUserByUname(@PathVariable(value="uname") String uname) {
 		return userService.findUserByUname(uname);
 	}
 	
-	//http://localhost:8282/user/getAllUsers
+	//http://localhost:8585/user/getAllUsers
 	@GetMapping("/getAllUsers")
 	public List<User> findAllUser() {
 		return userService.getAllUsers();
 	}
 
-	//http://localhost:8282/user/addUser
+	//http://localhost:8585/user/addUser
 	@PostMapping("/addUser")
 	public boolean addUser(@RequestBody User user) {
 		return userService.addUser(user);
 	}
 	
-	//http://localhost:8282/user/userexists
+	//http://localhost:8585/user/userexists
 	@GetMapping("/userexists/{uname}")
 	public boolean findUserExists(@PathVariable(value="uname") String uname) {
 		User u=null;
@@ -52,7 +52,7 @@ public class UserController {
 		return false;
 	}
 	
-	//http://localhost:8282/user/uservalidate
+	//http://localhost:8585/user/uservalidate
 	@GetMapping("/uservalidate/{uname}/{upass}")
 	public int validateUser(@PathVariable(value="uname") String uname,@PathVariable(value="upass") String upass) {
 		User u;
@@ -69,7 +69,7 @@ public class UserController {
 		return 0;
 	}
 	
-	//http://localhost:8282/user/changepass
+	//http://localhost:8585/user/changepass
 	@PutMapping("/changepass")
 	public boolean changePass(@RequestBody NamePass namepass) {
 		User u;
@@ -81,7 +81,7 @@ public class UserController {
 		return true;
 	}
 	
-	//http://localhost:8282/user/getId
+	//http://localhost:8585/user/getId
 	@GetMapping("/getId/{uname}")
 	public long findIdByUname(@PathVariable(value="uname") String uname) {
 		User u=null;

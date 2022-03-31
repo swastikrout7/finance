@@ -38,6 +38,10 @@ public class AdminLogin {
 	public AdminLogin() {
 		super();
 	}
+	@Override
+	public String toString() {
+		return "AdminLogin [adminid=" + adminid + ", aname=" + aname + ", apass=" + apass + "]";
+	}
     
 
 }

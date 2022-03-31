@@ -16,7 +16,9 @@ public class AdminLoginServiceImpl implements AdminLoginService {
      
 	@Override
 	public AdminLogin findAdmin(String aname) {
-		
 	return adminloginrepo.findUserByAname(aname);
 	}
+
+	
+	
 }

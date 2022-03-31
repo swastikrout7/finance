@@ -28,69 +28,69 @@ public class UserAdminController {
 	@Autowired
 	CardDetailsService cdService;
 	
-	//http://localhost:8282/UserDetails/getUserdetails
+	//http://localhost:8585/UserDetails/getUserdetails
 	@GetMapping("/getUserdetails")
 	public List<User> getAll(){
 		return adService.getUserdetails();
 	}
 	
-	//http://localhost:8282/UserDetails/findUser
+	//http://localhost:8585/UserDetails/findUser
 	@GetMapping("/findUser/{regid}")
 	public User getUserById(@PathVariable(value = "regid") long regid) {
 		return adService.findUser(regid);
 	}
 	
-	//http://localhost:8282/UserDetails/addUser
+	//http://localhost:8585/UserDetails/addUser
 	@PostMapping("/addUser")
 	public boolean addUser(@RequestBody User user) {
 	return adService.addUser(user);
 	}
 	
-	//http://localhost:8282/UserDetails/updateUser
+	//http://localhost:8585/UserDetails/updateUser
 	@PutMapping("/updateUser/{regid}")
 	public boolean updateuserById(@PathVariable(value="regid") long regid) {
 		return adService.updateUser(regid);
 	}
 	
-	//http://localhost:8282/UserDetails/deleteUser
+	//http://localhost:8585/UserDetails/deleteUser
 	@DeleteMapping("/deleteUser/{regid}")
 	public boolean deleteUser(@PathVariable(value="regid") long regid) {
 		return adService.deleteUser(regid);
 		//return prodService.deleteProduct(product);
 	}
 	
-	//http://localhost:8282/UserDetails/DeleteUser
+	//http://localhost:8585/UserDetails/DeleteUser
 	@DeleteMapping("/DeleteUser")
 	public boolean deleteUser(@RequestBody User user, long regid) {
 		return adService.deleteUser(regid);
 	}
 	
-	//http://localhost:8282/UserDetails/getCarddetails
+	//http://localhost:8585/UserDetails/getCarddetails
 	@GetMapping("/getCarddetails")
 	public List<CardDetails> getAllCards(){
 		return cdService.getCarddetails();
 	}
 	
-	//http://localhost:8282/UserDetails/findCard
+	//http://localhost:8585/UserDetails/findCard
 	@GetMapping("/findCard/{regid}")
 	public CardDetails getCardById(@PathVariable(value = "regid") long regid) {
 		return cdService.findCard(regid);
 	}
 	
-	//http://localhost:8282/UserDetails/addCard
+	//http://localhost:8585/UserDetails/addCard
 	@PostMapping("/addCard")
 	public boolean addCard(@RequestBody CardDetails card) {
 		
 	return cdService.addCard(card);
 	}
 	
-	//http://localhost:8282/UserDetails/updateCard
+	//http://localhost:8585/UserDetails/updateCard
 	@PutMapping("/updateCard/{regid}")
 	public boolean updatecardById(@PathVariable(value="regid")long regid) {
 		return cdService.updateCard(regid);
 	}
 	
-	//http://localhost:8282/UserDetails/deleteCard
+	//http://localhost:8585/UserDetails/deleteCard
 	@DeleteMapping("/deleteCard/{regid}")
 	public boolean deleteCard(@PathVariable(value="regid") long regid) {
 	return cdService.deleteCard(regid);

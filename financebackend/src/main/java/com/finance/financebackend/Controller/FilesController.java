@@ -33,14 +33,14 @@ public class FilesController {
         return new FilesUploadDownload(fileName);
     }
     
-  //http://localhost:8282/Files/getFiles
+  //http://localhost:8585/Files/getFiles
     // Displays the list of uploaded files.
     @GetMapping("/getFiles")
     public List<String> getFiles() throws IOException {
         return fileUploadDownloadService.getFiles();
     }
 
-  //http://localhost:8282/Files/downloadFile
+  //http://localhost:8585/Files/downloadFile
     // Downloads a file using filename.
     @GetMapping("/downloadFile/{fileName}")
     public ResponseEntity<Resource> downloadFile(@PathVariable String fileName, HttpServletRequest request) throws MalformedURLException {

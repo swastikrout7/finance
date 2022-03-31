@@ -19,13 +19,13 @@ public class EmiCardController {
 	@Autowired
 	EmiCardService emicardservice;
 	
-	//http://localhost:8282/emicard/getAllEmiCard
+	//http://localhost:8585/emicard/getAllEmiCard
 	@GetMapping("/getAllEmiCard")
 	public List<EmiCard> getAllEmiCard(){
 		return emicardservice.getAllEmiCard();
 	}
 	
-	//http://localhost:8282/emicard/addEmiCard
+	//http://localhost:8585/emicard/addEmiCard
 	@PostMapping("/addEmiCard")
 	public boolean addEmiCard( @RequestBody  EmiCard emiCard) {
 		return emicardservice.addEmiCard(emiCard);

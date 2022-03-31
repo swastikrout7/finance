@@ -23,28 +23,28 @@ import com.finance.financebackend.Service.FinanceService;
 @RequestMapping("/finance")
 public class FinanceController {
 	
-	@Autowired
+	 @Autowired
 	 FinanceService finSer;
 	 @Autowired
 	 UserRepository usRep;
 	 @Autowired
 	 CardDetailsRepository cdRep;
 	 
-	//http://localhost:8282/finance/financeHistory
+	//http://localhost:8585/finance/financeHistory
 	  //Details of user transaction history
      @GetMapping("/financeHistory/{regid}")
      public List<ProductHistory> getProducts(@PathVariable(value="regid")int regid){
    	  return finSer.getProducts(regid);
      }
      
-   //http://localhost:8282/finance/details
+   //http://localhost:8585/finance/details
      //Details of User from user table.
      @GetMapping("/details/{regid}")
      public User getDetails(@PathVariable(value="regid")long regid) {
    	 return finSer.getDetailsByRegId(regid);
      }
      
-   //http://localhost:8282/finance/carddetails
+   //http://localhost:8585/finance/carddetails
      @GetMapping("/carddetails/{regid}")
      public CardDetails getCardDet(@PathVariable(value="regid")long regid){
    	  return finSer.getCardDetailsByRegId(regid);
