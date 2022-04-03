@@ -44,6 +44,21 @@ public class FinanceController {
    	 return finSer.getDetailsByRegId(regid);
      }
      
+     //just for testing
+     //http://localhost:8585/finance/alldetails
+     @GetMapping("/alldetails")
+     public List<User> getAllDetails() {
+   	  return finSer.getAllDetails();
+     }
+     
+     
+     //http://localhost:8585/finance/addetails
+     //Just for testing
+     @PostMapping("/addetails")
+     public String addDetails(@RequestBody User userDet) {
+   	 return finSer.addDetails(userDet);
+     }
+     
    //http://localhost:8585/finance/carddetails
      @GetMapping("/carddetails/{regid}")
      public CardDetails getCardDet(@PathVariable(value="regid")long regid){

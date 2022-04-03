@@ -25,19 +25,19 @@ public class ProductController {
 		return prodService.viewProduct();
 	}
 
-	//http://localhost:8282/order/getProductById
+	//http://localhost:8585/order/getProductById
 	@GetMapping("/getProductById/{prodid}") // Find by ID
 	public Product getProductById(@PathVariable(value = "prodid") int prodid) {
 		return prodService.findProduct(prodid);
 	}
 
-	//http://localhost:8282/order/addProducts
+	//http://localhost:8585/order/addProducts
 	@PostMapping("/addProducts")
 	public String addProducts(@RequestBody Product product) {
 		return prodService.addProducts(product);
 	}
 
-	//http://localhost:8282/order/getProductsByName
+	//http://localhost:8585/order/getProductsByName
 	@GetMapping("/getProductsByName/{prodname}") // Find by Name
 	public List<Product> getProductsByName(@PathVariable(value = "prodname") String prodname) {
 		return prodService.viewProductByName(prodname);
